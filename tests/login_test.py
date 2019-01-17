@@ -4,7 +4,7 @@ from pages.loginpage import LoginPage
 from pages.homepage import Homepage
 from utils import util as util
 import allure
-import moment
+
 
 
 @pytest.mark.usefixtures("test_setup")
@@ -25,7 +25,7 @@ class TestLogin():
             home.click_welcome()
             home.click_logout()
             x = driver.title
-            assert x == "OrangeHRM1"
+            assert x == "OrangeHRM"
 
         except AssertionError as Error:
             print("Assertion Error Occured")
